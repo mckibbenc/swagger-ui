@@ -34,5 +34,8 @@ export default function curl( request ){
     }
   }
 
+  // Add -L flag so cURL will follow redirect links
+  curlified.push( "-L" )
+
   return curlified.join( " " )
 }
